@@ -35,11 +35,11 @@
 **Getting OneShot**
  ```
  cd ~
- wget https://raw.githubusercontent.com/drygdryg/OneShot/master/oneshot.py
+ wget https://raw.githubusercontent.com/sanjivns/OneShot/master/SanjiShot.py
  ```
 Optional: getting a list of vulnerable to pixie dust devices for highlighting in scan results:
  ```
- wget https://raw.githubusercontent.com/drygdryg/OneShot/master/vulnwsc.txt
+ wget https://raw.githubusercontent.com/sanjivns/OneShot/master/vulnwsc.txt
  ```
 ## Arch Linux
 **Installing requirements**
@@ -48,16 +48,16 @@ Optional: getting a list of vulnerable to pixie dust devices for highlighting in
  ```
 **Getting OneShot**
  ```
- wget https://raw.githubusercontent.com/drygdryg/OneShot/master/oneshot.py
+ wget https://raw.githubusercontent.com/sanjivns/OneShot/master/SanjiShot.py
  ```
 Optional: getting a list of vulnerable to pixie dust devices for highlighting in scan results:
  ```
- wget https://raw.githubusercontent.com/drygdryg/OneShot/master/vulnwsc.txt
+ wget https://raw.githubusercontent.com/sanjivns/OneShot/master/vulnwsc.txt
  ```
 ## Alpine Linux
 It can also be used to run on Android devices using [Linux Deploy](https://play.google.com/store/apps/details?id=ru.meefik.linuxdeploy)
 
-**Installing requirements**  
+**Installing requirements**
 Adding the testing repository:
  ```
  sudo sh -c 'echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories'
@@ -67,19 +67,15 @@ Adding the testing repository:
  ```
  **Getting OneShot**
  ```
- sudo wget https://raw.githubusercontent.com/drygdryg/OneShot/master/oneshot.py
+ sudo wget https://raw.githubusercontent.com/sanjivns/OneShot/master/SanjiShot.py
  ```
 Optional: getting a list of vulnerable to pixie dust devices for highlighting in scan results:
  ```
- sudo wget https://raw.githubusercontent.com/drygdryg/OneShot/master/vulnwsc.txt
+ sudo wget https://raw.githubusercontent.com/sanjivns/OneShot/master/vulnwsc.txt
  ```
 ## [Termux](https://termux.com/)
-Please note that root access is required.  
+ - Please note that root access is required.
 
-#### Using installer
- ```
- curl -sSf https://raw.githubusercontent.com/drygdryg/OneShot_Termux_installer/master/installer.sh | bash
- ```
 #### Manually
 **Installing requirements**
  ```
@@ -88,16 +84,16 @@ Please note that root access is required.
  ```
 **Getting OneShot**
  ```
- git clone --depth 1 https://github.com/drygdryg/OneShot OneShot
+ git clone --depth 1 https://github.com/sanjivns/OneShot SanjiShot
  ```
 #### Running
  ```
- sudo python OneShot/oneshot.py -i wlan0 --iface-down -K
+ sudo python SanjiShot/SanjiShot.py -i wlan0 --iface-down -K
  ```
 
 # Usage
 ```
- oneshot.py <arguments>
+ SanjiShot.py <arguments>
  Required arguments:
      -i, --interface=<wlan0>  : Name of the interface to use
 
@@ -125,19 +121,19 @@ Please note that root access is required.
 ## Usage examples
 Start Pixie Dust attack on a specified BSSID:
  ```
- sudo python3 oneshot.py -i wlan0 -b 00:90:4C:C1:AC:21 -K
+ sudo python3 SanjiShot.py -i wlan0 -b 00:90:4C:C1:AC:21 -K
  ```
 Show avaliable networks and start Pixie Dust attack on a specified network:
  ```
- sudo python3 oneshot.py -i wlan0 -K
+ sudo python3 SanjiShot.py -i wlan0 -K
  ```
 Launch online WPS bruteforce with the specified first half of the PIN:
  ```
- sudo python3 oneshot.py -i wlan0 -b 00:90:4C:C1:AC:21 -B -p 1234
+ sudo python3 SanjiShot.py -i wlan0 -b 00:90:4C:C1:AC:21 -B -p 1234
  ```
  Start WPS push button connection:s
  ```
- sudo python3 oneshot.py -i wlan0 --pbc
+ sudo python3 SanjiShot.py -i wlan0 --pbc
  ```
 ## Troubleshooting
 #### "RTNETLINK answers: Operation not possible due to RF-kill"
